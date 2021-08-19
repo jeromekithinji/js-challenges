@@ -22,7 +22,8 @@
  */
 
 export const removeFalseValues = (booleanArr) => {
-  return;
+    const trueArr = booleanArr.filter(boolean => boolean === true);
+    return trueArr;
 };
 
 /**
@@ -34,7 +35,8 @@ export const removeFalseValues = (booleanArr) => {
  */
 
 export const createPercentageList = (numbersArr) => {
-  return;
+    const percentageConvert = numbersArr.map(number => (number *100) + "%");
+    return percentageConvert;
 };
 
 /**
@@ -47,7 +49,9 @@ export const createPercentageList = (numbersArr) => {
  */
 
 export const createListOfPoessessions = (possessionsArr, name) => {
-  return;
+    // const concatItems = possessionsArr.map(possession => possession + ` (name.map(name => name))`);
+    const createListOfPossessions = possessionsArr.map((possession) => `${name} ${possession}`);
+    return createListOfPossessions;
 };
 
 /**
@@ -72,7 +76,11 @@ export const createListOfPoessessions = (possessionsArr, name) => {
  */
 
 export const convertStringToNumbersArray = (numberString) => {
-  return;
+    const numArray = numberString.split("+");
+    return numArray.map(number => parseInt(number));
+
+    // const numArr = numberString.forEach(number => number.split("+").map());
+    // return numArr;
 };
 
 /**
@@ -84,7 +92,9 @@ export const convertStringToNumbersArray = (numberString) => {
  */
 
 export const createOddEvenArray = (numberString) => {
-  return;
+    // const oddEven 
+    const numArr = convertStringToNumbersArray(numberString);
+    return numArr.map(number => number % 2 === 0? "even" : "odd");
 };
 
 /**
@@ -97,7 +107,8 @@ export const createOddEvenArray = (numberString) => {
  */
 
 export const filterBooksBySearch = (booksArr, searchTerm) => {
-  return;
+    const filteredBook = booksArr.filter(term => term.includes(searchTerm));
+    return filteredBook;
 };
 
 /**
@@ -143,6 +154,7 @@ export const formatStringArray = (stringArr) => {
  */
 
 export const formatString = (string) => {
+    const finalString = string.filter(char => char.includes(""))
   return;
 };
 

@@ -22,7 +22,14 @@
  */
 
 export const createRecipeString = (ingredientsArr) => {
-  return;
+    // let recipeString;
+    // for (let index = 0; index < ingredientsArr.length; index++) {
+    //     recipeString = recipeString + "+" + ingredientsArr[index];
+    //     return recipeString;
+    // }
+    // return recipeString;
+    return ingredientsArr.join("+");
+
 };
 
 /**
@@ -33,7 +40,12 @@ export const createRecipeString = (ingredientsArr) => {
  */
 
 export const getFirstAndLastItems = (itemsArr) => {
-  return;
+    let newArray = [];
+    const firstItem = itemsArr[0];
+    const lastItem = itemsArr[itemsArr.length-1];
+    newArray.push(firstItem);
+    newArray.push(lastItem);
+    return newArray; 
 };
 
 /**
@@ -44,7 +56,11 @@ export const getFirstAndLastItems = (itemsArr) => {
  */
 
 export const totalScores = (scoreArr) => {
-  return;
+    let totalScore = 0;
+    for (let index = 0; index < scoreArr.length; index++) {
+        totalScore += scoreArr[index];
+    }
+    return totalScore;
 };
 
 /**
@@ -60,7 +76,11 @@ export const totalScores = (scoreArr) => {
  */
 
 export const totalRange = (rangeMax) => {
-  return;
+    let total = 0;
+    for (let index = 0; index <= rangeMax; index++) {
+        total += index;
+    }
+    return total;
 };
 
 /**
@@ -71,7 +91,10 @@ export const totalRange = (rangeMax) => {
  */
 
 export const moveFirstAndLastItems = (itemsArr) => {
-  return;
+    // itemsArr.unshift(itemsArr.pop());
+    const copy = [...itemsArr];
+    copy.unshift(itemsArr[itemsArr.length-1]);
+    return copy;
 };
 
 /**
@@ -89,7 +112,20 @@ export const moveFirstAndLastItems = (itemsArr) => {
  */
 
 export const removeEvenNumbers = (numberArr) => {
-  return;
+    // let newArr = [];
+    // for (let index = 0; index < numberArr.length; index++) {
+    //     if (numberArr[index] % 2 == 1) { // instead add the odd numbers to the array
+    //         newArr.push(numberArr[index]);
+    //         return newArr;
+    //     }
+    //     else {
+    //         return newArr;
+    //     }
+    // }
+    // return newArr;
+
+    const odd = numberArr.filter(index => index%2);
+    return odd;
 };
 
 /**
@@ -105,7 +141,9 @@ export const removeEvenNumbers = (numberArr) => {
  */
 
 export const generateAverage = (numberArr) => {
-  return;
+        const total = totalScores(numberArr);
+        const average = total / numberArr.length;
+        return average;
 };
 
 /**
@@ -116,7 +154,17 @@ export const generateAverage = (numberArr) => {
  */
 
 export const reverseOrder = (toReverseArr) => {
-  return;
+    const reverse = [];
+    for (let index = toReverseArr.length-1; index >= 0; index--) {
+        reverse.push(toReverseArr[index]);
+    }
+    return reverse;
+
+    //Another way
+    // const clone = [...toReverseArr];
+    // const reseverseArr = clone.reverse();
+    // return reverseArr
+
 };
 
 /**
@@ -138,6 +186,7 @@ export const reverseOrder = (toReverseArr) => {
  */
 
 export const generateHighscores = (playersArr, scoresArr) => {
+
   return;
 };
 

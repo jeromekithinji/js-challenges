@@ -20,6 +20,8 @@ const lastName = "Smith";
 
 export const createFullName = () => {
   // Write your code here
+  const fullName = firstName + " " + lastName;
+  return fullName;
 };
 
 /**
@@ -33,6 +35,18 @@ const largeNumber2 = 200;
 
 export const findLargestNumber = () => {
   // Write your code here
+  let bigNumber;
+
+  if (largeNumber1 < largeNumber2) {
+      bigNumber = largeNumber2;
+  }
+  else if (largeNumber1 = largeNumber2) {
+    console.log("Numbers are the same")
+  }
+  else {
+      bigNumber = largeNumber1;
+  }
+  return bigNumber;
 };
 
 /**
@@ -46,6 +60,10 @@ const addNumber2 = 24;
 
 export const addNumbers = () => {
   // Write your code here
+  let sum;
+
+  sum = addNumber1 + addNumber2;
+  return sum;
 };
 
 /* Intermediate Challenges */
@@ -60,6 +78,7 @@ const password = "thisIsMyVeryLongPassword123456789";
 
 export const findLengthOfPassword = () => {
   // Write your code here
+  return password.length;
 };
 
 /**
@@ -76,6 +95,21 @@ const thing = "I am a thing";
 
 export const findType = () => {
   // Write your code here
+  let response;
+
+  if (typeof thing === "string") {
+    response =  "This is a string";
+  }
+  else if (typeof thing === number) {
+    response =  "This is a number";
+  }
+  else if (typeof thing === boolean) {
+    response =  "This is a boolean";
+  }
+  else {
+    response =  "I don't know what this thing is";
+  }
+  return response;
 };
 
 /**
@@ -89,6 +123,12 @@ const nameTagOption = "Timothy";
 
 export const getIsValidOnNameTag = () => {
   // Write your code here
+  if (nameTagOption.length <= 8 && nameTagOption[0] == nameTagOption[0].toUpperCase()) {
+    return true;
+  }
+  else {
+      return false
+  }
 };
 
 /* Advanced Challenges */
@@ -103,6 +143,10 @@ const stringToConvert = "14.45";
 
 export const convertStringToNumber = () => {
   // Write your code here
+//   return parseInt(stringToConvert); // 14(rounds it up)
+//   return parseFloat(stringToConvert); // works
+//   return +stringToConvert; // works
+  return Number(stringToConvert); // works
 };
 
 /**

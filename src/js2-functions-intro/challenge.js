@@ -18,6 +18,8 @@
  */
 export const createFullName = (firstName, lastName) => {
   /* Write your code here */
+    const fullName = firstName + " " + lastName;
+    return fullName;
 };
 
 /**
@@ -28,9 +30,21 @@ export const createFullName = (firstName, lastName) => {
  * @param {number} number2 200
  * @returns {number} 100
  */
-export const findSmallestNumber = (/* Write the parameters here */) => {
+export const findSmallestNumber = (number1, number2) => {
   /* Write your code here */
-};
+    let smallNumber;
+
+    if (number1 < number2) {
+        smallNumber = number1;
+    }
+    else if (number1 = number2) {
+    console.log("Numbers are the same")
+    }
+    else {
+        smallNumber = number2;
+    }
+    return smallNumber;
+    };
 
 /**
  * A function that takes two numbers as input, multiplies them together and returns the product.
@@ -40,9 +54,11 @@ export const findSmallestNumber = (/* Write the parameters here */) => {
  * @param {number} number2 6
  * @returns {number} 18
  */
-export const multiplyNumbers = (/* Write the parameters here */) => {
+export const multiplyNumbers = (number1, number2) => {
   /* Write your code here */
-};
+    const product = number1 * number2;
+    return product;
+    };
 
 /* Intermediate Challenges */
 
@@ -58,6 +74,19 @@ export const multiplyNumbers = (/* Write the parameters here */) => {
  */
 export const checkIfNewHighScore = (score, highScore) => {
   /* Write your code here */
+  let response;
+
+  if (score > highScore) {
+    //   highScore = userScore;
+      response = "You got a new high score!";
+  }
+  else if (score == highScore) {
+    response = "So close!";
+  }
+  else {
+    response = "Better luck next Time";
+  }
+  return response;
 };
 
 /**
@@ -68,6 +97,8 @@ export const checkIfNewHighScore = (score, highScore) => {
  */
 export const celsiusToFahrenheit = (tempInCelsius) => {
   /* Write your code here */
+    const tempFahrenheit = ((tempInCelsius * 1.8) + 32);
+    return tempInCelsius + " degrees celsius is " + tempFahrenheit + " degrees fahrenheit";
 };
 
 /**
@@ -81,6 +112,8 @@ export const celsiusToFahrenheit = (tempInCelsius) => {
  */
 export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
   /* Write your code here */
+    const lifetimeSupply = (((maxAge - age)*365)* snickersPerDay);
+    return lifetimeSupply;
 };
 
 /* Advanced Challenges */
@@ -101,6 +134,31 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  */
 export const getGrade = (score) => {
   /* Write your code here */
+    // let grade = score;
+    switch (true) {
+        case score >= 80 && score <= 100:
+            return "A";
+            break;
+        case score >= 70:
+            return "B";
+            break;
+        case score >= 60:
+            return "C";
+            break;
+        case score >= 50:
+            return "D";
+            break;
+        case score >= 40:
+            return "E";
+            break;
+        case score >= 0:
+            return "F";
+            break;
+        case score > 100 || score == 0:
+            return "Score Unavailable";
+        default:
+            return "Score Unavailable";
+    }
 };
 
 /**
